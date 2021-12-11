@@ -5,9 +5,10 @@ import validations from "../../utils/validations";
 import sweetAlert from "../../utils/SweetAlert";
 import axios from "axios";
 import Constants from "../../config/constants";
-import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    let navigate = useNavigate();
     const [user, setUser] = useState({
         email: '',
         password: ''
@@ -44,7 +45,7 @@ const Login = () => {
         }
         await sweetAlert.successAlert(`Welcome ${response.data.name}`);
         sessionStorage.setItem("user", JSON.stringify(response.data.id));
-        return <Link to="/admin"/>
+        navigate("/admin");
     }
 
     return (

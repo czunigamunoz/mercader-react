@@ -1,13 +1,13 @@
 import Login from "./components/login";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Sidebar from "./components/sidebar";
+import Index from "./components/admin";
 
 function App() {
   return (
       <Router>
         <Routes>
-          <Route exact path="/" element={<Login /> }/>
-          <Route exact path="/admin" element={<Sidebar/>}/>
+          <Route path="/" element={<Login /> }/>
+          <Route path="/admin" element={<Index/>}/>
         </Routes>
       </Router>
   );
