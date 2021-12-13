@@ -18,6 +18,7 @@ const Admin = () => {
                 <Route path="/users" element={<Users/>}/>
             </Routes>
         </div>
+
     )
 }
 

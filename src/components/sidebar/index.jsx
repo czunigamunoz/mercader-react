@@ -1,8 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Constants from "../../config/constants";
-import '../../styles/common.css';
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {logos} from "../../config/constants";
 
@@ -19,19 +18,8 @@ const Sidebar = (props) => {
         }
     }
 
-    // const linkActive = () => {
-    //     const links = document.querySelectorAll('.sidebar a');
-    //     links.forEach(link => {
-    //         link.addEventListener("click", function (e) {
-    //             link.parentElement.childNodes.forEach(link => link.)
-    //             this.classList.add("active");
-    //         });
-    //     })
-    // }
-
     useEffect(() => {
         getUser().then((response) => setUser(response.data));
-        // linkActive()
     }, []);
 
     return (

@@ -1,15 +1,21 @@
+import {logos} from "../../config/constants";
+
 const ModalUser = () => {
+
+    const handleClose = () => {
+        document.querySelector('.modal').classList.remove("modal--active");
+    }
 
     return (
         <div className="modal">
 
             <div className="modal__container">
 
-                <div className="modal__close" id="btnCloseModal">
-                    <span className="material-icons-sharp">close</span>
+                <div className="modal__close" onClick={handleClose}>
+                    {logos.close}
                 </div>
 
-                <span className="material-icons-sharp icon_add">person_add_alt</span>
+                {logos.user__add}
 
                 <form>
 
@@ -23,32 +29,32 @@ const ModalUser = () => {
                         <input type="text" name="name" id="name"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="address">Address</label>
                         <input type="text" name="address" id="address"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="phone">Phone</label>
                         <input type="text" name="phone" id="phone"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="email">Email</label>
                         <input type="email" name="email" id="email"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="password">Password</label>
                         <input type="text" name="password" id="password"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="zone">Zone</label>
                         <input type="text" name="zone" id="zone"/>
                     </div>
 
-                    <div class="form__input">
+                    <div className="form__input">
                         <label htmlFor="type" data-label="Select rol">Select rol</label>
                         <select name="type" id="type">
                             <option value="">Select one option</option>
