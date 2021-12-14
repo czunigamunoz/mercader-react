@@ -118,6 +118,7 @@ body {
     height: 1.5rem;
     top: 0.25em;
     left: 0.25em;
+    z-index: 10;
 }
 
 .active {

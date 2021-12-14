@@ -3,7 +3,7 @@ import axios from "axios";
 import Constants from "../../config/constants";
 import {Link} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
-import {logos} from "../../config/constants";
+import {icons} from "../../config/constants";
 
 const Sidebar = (props) => {
 
@@ -52,9 +52,9 @@ const Sidebar = (props) => {
                         return (
                             <Link to={menuLinks[link]} key={i}>
                                 {(() => {
-                                    if (link === 'Dashboard') return logos.grid
-                                    if (link === 'Users') return logos.users
-                                    if (link === 'Products') return logos.products
+                                    if (link === 'Dashboard') return icons.grid
+                                    if (link === 'Users') return icons.users
+                                    if (link === 'Products') return icons.products
                                 })()}
                                 <h3>{link}</h3>
                             </Link>
@@ -62,7 +62,7 @@ const Sidebar = (props) => {
                     })
                 }
                 <Link to="/">
-                    {logos.logout}
+                    {icons.logout}
                     <h3>Logout</h3>
                 </Link>
 

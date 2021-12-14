@@ -1,4 +1,4 @@
-const Dashboard = () => {
+const DashboardSalesAdvisor = () => {
     const styleTemporal = {
         marginTop: '20rem',
         marginLeft: '5rem'
@@ -18,4 +18,5 @@ const Dashboard = () => {
         </main>
     )
 }
-export default Dashboard;
+
+export default DashboardSalesAdvisor;
