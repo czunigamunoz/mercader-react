@@ -3,11 +3,10 @@ import axios from "axios";
 import Constants, {icons} from "../../config/constants";
 import sweetAlert from "../../utils/SweetAlert";
 import {Modal} from "react-bootstrap";
-import constants from "../../config/constants";
 import validations from "../../utils/validations";
 
 const Users = () => {
-    const [user, setUser] = useState(constants.default_user);
+    const [user, setUser] = useState(Constants.default_user);
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
 
@@ -21,11 +20,13 @@ const Users = () => {
             [e.currentTarget.id]: e.currentTarget.value
         });
     }
+
     const getUsers = () => {
         axios.get(`${Constants.url_user}/all`)
-            .then( response => setUsers(response.data))
+            .then( result => setUsers(result.data))
             .catch(error => console.log(error));
     }
+
     const validationsUser = async () => {
         if (validations.empty(user.identification, user.name, user.address, user.cellPhone, user.email, user.password, user.zone, user.type)){
             await sweetAlert.errorAlert('All fields are required');
@@ -60,7 +61,7 @@ const Users = () => {
     }
 
     const addUser = () => {
-        setUser(constants.default_user);
+        setUser(Constants.default_user);
         setShow(true);
     }
 

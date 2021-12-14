@@ -13,6 +13,17 @@ const Constants = {
         password: '',
         zone: '',
         type: ''
+    },
+    default_product: {
+        id: null,
+        brand: '',
+        category: 'Gadgets',
+        name: '',
+        description: '',
+        price: 0,
+        availability: "",
+        quantity: 0,
+        photography: ''
     }
 }
 

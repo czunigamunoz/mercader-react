@@ -18,6 +18,14 @@ class Validations {
     greaterThan50(text){
         return text.length > 50;
     }
+
+    isNumber(text){
+        return typeof Number(text) === "number" && Number(text) > 0;
+    }
+
+    isLink(text){
+        return /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)?/gi.test(text)
+    }
 }
 
 const validations = new Validations();
