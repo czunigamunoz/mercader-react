@@ -123,8 +123,8 @@ const Products = () => {
                                         <td data-label="Availability">{product.availability ? 'SI' : 'NO'}</td>
                                         <td data-label="Quantity">{product.quantity}</td>
                                         <td data-label="Photography"><img src={product.photography} alt={product.brand}/></td>
-                                        <td data-label="Zone"><span className="warning" onClick={()=>updateProduct(product)}>{icons.edit}</span></td>
-                                        <td data-label="Zone"><span className="danger" onClick={()=>deleteProduct(product.id)}>{icons.delete}</span></td>
+                                        <td data-label="Edit"><span className="warning" onClick={()=>updateProduct(product)}>{icons.edit}</span></td>
+                                        <td data-label="Delete"><span className="danger" onClick={()=>deleteProduct(product.id)}>{icons.delete}</span></td>
                                     </tr>
                                 ))
                             }

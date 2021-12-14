@@ -24,6 +24,14 @@ const Constants = {
         availability: "",
         quantity: 0,
         photography: ''
+    },
+    default_order: {
+        id: null,
+        registerDay: '',
+        status: '',
+        salesMan: {},
+        products: {},
+        quantities: {}
     }
 }
 
