@@ -7,7 +7,7 @@ const Coordinator = () => {
 
     const menuLinks = {
         Dashboard: "/coordinator",
-        Users: "/coordinator/order"
+        Order: "/coordinator/order"
     }
 
     return (

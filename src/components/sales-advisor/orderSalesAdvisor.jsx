@@ -119,7 +119,7 @@ const OrderSalesAdvisor =() => {
                                         <td data-label="Description">{product.description}</td>
                                         <td data-label="Price">{product.price}</td>
                                         <td data-label="Photography">
-                                            <img src={product.photography} alt={product.name}/>
+                                            <img src={product.photography} alt={product.category}/>
                                         </td>
                                         <td data-label="Quantity">
                                             <input id={product.id}

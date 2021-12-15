@@ -7,7 +7,7 @@ const SalesAdvisor = () => {
 
     const menuLinks = {
         Dashboard: "/sales-advisor",
-        Users: "/sales-advisor/order"
+        Order: "/sales-advisor/order"
     }
     return (
         <div className="container__bootstrap-no">
