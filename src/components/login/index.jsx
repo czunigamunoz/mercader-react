@@ -44,7 +44,7 @@ const Login = () => {
             return;
         }
         await sweetAlert.successAlert(`Welcome ${response.data.name}`);
-        sessionStorage.setItem("user", JSON.stringify(response.data.id));
+        sessionStorage.setItem("user", JSON.stringify(response.data));
         if (response.data.type === "ADM") return navigate("/admin");
         if (response.data.type === "COORD") return navigate("/coordinator");
         navigate("/sales-advisor");

@@ -62,7 +62,7 @@ const OrderSalesAdvisor =() => {
             await sweetAlert.errorAlert("You must add quantity in the corresponding field");
             return;
         }
-        const salesMan = await axios(`${Constants.url_user}/${sessionStorage.getItem("user")}`);
+        const salesMan = JSON.parse(sessionStorage.getItem("user"));
         const productsToSend = {}
         for (let i = 0; i<productsOrder.length; i++){
             productsToSend[productsOrder[i].id] = productsOrder[i]
@@ -70,7 +70,7 @@ const OrderSalesAdvisor =() => {
         const data = {
             registerDay: getCurrentDate(),
             status: "Pendiente",
-            salesMan: salesMan.data,
+            salesMan,
             products: productsToSend,
             quantities: {...quantities}
         };

@@ -1,6 +1,4 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
-import Constants from "../../config/constants";
 import {Link} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {icons} from "../../config/constants";
@@ -10,16 +8,8 @@ const Sidebar = (props) => {
     const {menuLinks} = props.menuLinks;
     const [user, setUser] = useState({});
 
-    const getUser = async () => {
-        const idUser = sessionStorage.getItem("user");
-        const response = await axios(`${Constants.url_user}/${idUser}`);
-        if (response.data.id !== null){
-            return response;
-        }
-    }
-
     useEffect(() => {
-        getUser().then((response) => setUser(response.data));
+        setUser(JSON.parse(sessionStorage.getItem("user")));
     }, []);
 
     return (

@@ -4,7 +4,6 @@ import DashboardCoordinator from "./dashboardCoordinator";
 import OrderCoordinator from "./orderCoordinator";
 
 const Coordinator = () => {
-
     const menuLinks = {
         Dashboard: "/coordinator",
         Order: "/coordinator/order"
