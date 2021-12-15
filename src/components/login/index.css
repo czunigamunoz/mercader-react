@@ -31,6 +31,7 @@ body {
     background-color: var(--color-secondary);
     box-shadow: 12px 12px 20px #cdced1, -13px -13px 20px #fff;
 
+    min-height: 30em;
     display: flex;
     flex-direction: column;
     align-items: center;

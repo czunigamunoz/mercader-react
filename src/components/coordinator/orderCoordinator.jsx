@@ -28,7 +28,8 @@ const OrderCoordinator = () => {
 
     const showOrderDetails = async (orderId) => {
         const orderDb = (await axios.get(`${Constants.url_order}/${orderId}`)).data;
-        setOrder(orderDb);
+        await setOrder(orderDb);
+        console.log(order);
         setShow(true);
     }
 

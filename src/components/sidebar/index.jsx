@@ -44,7 +44,10 @@ const Sidebar = (props) => {
                                 {(() => {
                                     if (link === 'Dashboard') return icons.grid
                                     if (link === 'Users') return icons.users
+                                    if (link === 'Products') return icons.products
                                     if (link === 'Order') return icons.add_shopping
+                                    if (link === 'OrderDate') return icons.date
+                                    if (link === 'OrderStatus') return icons.status
                                 })()}
                                 <h3>{link}</h3>
                             </Link>
