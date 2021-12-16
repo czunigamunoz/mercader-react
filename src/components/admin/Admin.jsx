@@ -7,7 +7,7 @@ import Products from "./Products";
 const Admin = () => {
 
     const menuLinks = {
-        Dashboard: "/admin",
+        Dashboard: "/admin/dashboard",
         Users: "/admin/users",
         Products: "/admin/products"
     }
@@ -15,9 +15,10 @@ const Admin = () => {
         <div className="container__bootstrap-no">
             <Sidebar menuLinks={{menuLinks}}/>
             <Routes>
-                <Route path="/" element={<DashboardAdmin /> }/>
+                <Route path="/dashboard" element={<DashboardAdmin /> }/>
                 <Route path="/users" element={<Users/>}/>
                 <Route path="/products" element={<Products/>}/>
+                <Route path="*" element={<DashboardAdmin /> }/>
             </Routes>
         </div>
 

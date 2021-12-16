@@ -5,7 +5,7 @@ import OrderCoordinator from "./OrderCoordinator";
 
 const Coordinator = () => {
     const menuLinks = {
-        Dashboard: "/coordinator",
+        Dashboard: "/coordinator/dashboard",
         Order: "/coordinator/order"
     }
 
@@ -13,8 +13,9 @@ const Coordinator = () => {
         <div className="container__bootstrap-no">
             <Sidebar menuLinks={{menuLinks}}/>
             <Routes>
-                <Route path="/" element={<DashboardCoordinator /> }/>
+                <Route path="/dashboard" element={<DashboardCoordinator /> }/>
                 <Route path="/order" element={<OrderCoordinator/>}/>
+                <Route path="*" element={<DashboardCoordinator/>}/>
             </Routes>
         </div>
     )

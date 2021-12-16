@@ -15,11 +15,11 @@ const Login = () => {
     })
 
     const handleInputFocus = (e) => {
-        e.target.nextElementSibling.classList.add("active");
+        e.target.nextElementSibling.classList.add("active-login");
     }
 
     const handleInputFocusOut = (e) => {
-        if (!e.target.value) e.target.nextElementSibling.classList.remove("active");
+        if (!e.target.value) e.target.nextElementSibling.classList.remove("active-login");
     }
 
     const handleInputChange = (e) => {

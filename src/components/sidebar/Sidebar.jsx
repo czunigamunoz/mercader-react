@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {icons} from "../../config/constants";
 
@@ -40,7 +40,7 @@ const Sidebar = (props) => {
                 {
                     Object.keys(menuLinks).map((link, i) => {
                         return (
-                            <Link to={menuLinks[link]} key={i}>
+                            <NavLink exact="true" to={menuLinks[link]} className={({ isActive }) => (isActive ? "active-nav" : "")}  key={i}>
                                 {(() => {
                                     if (link === 'Dashboard') return icons.grid
                                     if (link === 'Users') return icons.users
@@ -50,14 +50,14 @@ const Sidebar = (props) => {
                                     if (link === 'OrderStatus') return icons.status
                                 })()}
                                 <h3>{link}</h3>
-                            </Link>
+                            </NavLink>
                         )
                     })
                 }
-                <Link to="/">
+                <NavLink to="/">
                     {icons.logout}
                     <h3>Logout</h3>
-                </Link>
+                </NavLink>
 
             </section>
         </aside>

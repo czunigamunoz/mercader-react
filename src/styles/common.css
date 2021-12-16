@@ -200,21 +200,26 @@ aside .sidebar a:last-child {
     width: 100%;
 }
 
-aside .sidebar a.active {
+.active-nav {
     background-color: var(--color-hover-dos);
     color: var(--color-hover);
     margin-left: 0;
 }
 
-aside .sidebar a.active::before {
+.active-nav::before {
     content: " ";
     width: 4%;
     height: 100%;
     background-color: var(--color-blue-dark);
 }
 
+aside .sidebar a span{
+    transition: all 0.5s ease-in;
+}
+
 aside .sidebar a:hover span {
     margin-left: 1rem;
+    transition: all 0.5s ease-in;
 }
 
 .info-sell span {

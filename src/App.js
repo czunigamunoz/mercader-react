@@ -8,10 +8,10 @@ function App() {
   return (
       <Router>
         <Routes>
-          <Route path="/" element={<Login /> }/>
+          <Route exact path="/" element={<Login /> }/>
           <Route path="admin/*" element={<Admin/>}/>
-          <Route path="sales-advisor/*" element={<SalesAdvisor/>}/>
-          <Route path="coordinator/*" element={<Coordinator/>}/>
+          <Route exact path="sales-advisor/*" element={<SalesAdvisor/>}/>
+          <Route exact path="coordinator/*" element={<Coordinator/>}/>
         </Routes>
       </Router>
   );
