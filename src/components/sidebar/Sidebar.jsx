@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {icons} from "../../config/constants";
+import {Button} from "react-bootstrap";
 
 const Sidebar = (props) => {
-
+    let navigate = useNavigate();
     const {menuLinks} = props.menuLinks;
     const [user, setUser] = useState({});
 
@@ -12,8 +13,13 @@ const Sidebar = (props) => {
         setUser(JSON.parse(sessionStorage.getItem("user")));
     }, []);
 
+    const signOut = () => {
+        sessionStorage.removeItem("user");
+        navigate('/');
+    }
+
     return (
-        <aside>
+        <aside className="aside">
             <section className="top">
 
                 <div className="logo">
@@ -54,11 +60,10 @@ const Sidebar = (props) => {
                         )
                     })
                 }
-                <NavLink to="/">
-                    {icons.logout}
-                    <h3>Logout</h3>
-                </NavLink>
-
+                <Button className="mt-auto p-3 btn--sign-out w-100" onClick={() => signOut()}>
+                    {icons.logout}&nbsp;&nbsp;
+                    Logout
+                </Button>
             </section>
         </aside>
     )

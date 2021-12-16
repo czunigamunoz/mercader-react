@@ -2,7 +2,7 @@
 
 :root{
     --color-main: #1675F2;
-    --color-secondary: #ecf0f3;
+    --color-bg-white: #ecf0f3;
     --color-ternary: #F26666;
     --color-hover: #082B59;
     --color-text: #555;
@@ -21,14 +21,14 @@ body {
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-white);
     color: var(--color-text);
 }
 
 .box__container {
     padding: 1em 2em;
     border-radius: .7rem;
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-white);
     box-shadow: 12px 12px 20px #cdced1, -13px -13px 20px #fff;
 
     min-height: 30em;

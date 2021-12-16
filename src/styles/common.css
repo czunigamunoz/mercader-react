@@ -2,7 +2,7 @@
 
 :root {
     --color-primary: #1675f2;
-    --color-secondary: #f0f8ff;
+    --color-bg-white: #f0f8ff;
     --color-hover-dos: #99a7ba;
     --color-blue-dark: #082b59;
     --text-dark: #181818;
@@ -15,7 +15,7 @@
     --card-border-radius: 2rem;
     --card-padding: 1.8rem;
     --padding: 1.4rem 0;
-    --box-shadow: 0 2rem 3rem var(--color-secondary);
+    --box-shadow: 0 2rem 3rem var(--color-bg-white);
 
     --margin-top: 2rem;
 }
@@ -31,11 +31,10 @@ body {
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    background-color: var(--color-secondary);
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--color-primary);
 }
 
@@ -83,7 +82,7 @@ p {
 }
 
 .bg-light {
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-white);
 }
 
 .text-light {
@@ -112,9 +111,8 @@ p {
     grid-template-columns: 14rem auto;
 }
 
-aside {
+.aside {
     height: 100vh;
-    background-color: var(--color-secondary);
 }
 
 aside .top {
@@ -255,7 +253,8 @@ main .search-box input {
     border: 2px solid var(--color-blue-dark);
 }
 
-main .content button {
+main .content button,
+.btn--sign-out{
     margin-top: 2rem;
     width: 8rem;
     position: relative;
@@ -265,14 +264,15 @@ main .content button {
     padding: .7rem 1em;
     outline: none;
     border: none;
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-blue-dark) !important;
     border-radius: 0.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-main .content button:hover {
-    background-color: var(--color-primary);
+main .content button:hover,
+.btn--sign-out:hover {
+    background-color: var(--color-primary) !important;
 }
 
 main .table__container {
