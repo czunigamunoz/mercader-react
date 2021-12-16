@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import Constants, {icons} from "../../config/constants";
 import axios from "axios";
 import validations from "../../utils/validations";
-import sweetAlert from "../../utils/SweetAlert";
+import sweetAlert from "../../utils/sweetAlert";
 
 const Products = () => {
     const [product, setProduct] = useState(Constants.default_product);

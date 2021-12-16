@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Constants, {icons} from "../../config/constants";
 import axios from "axios";
 import {Modal} from "react-bootstrap";
-import sweetAlert from "../../utils/SweetAlert";
+import sweetAlert from "../../utils/sweetAlert";
 
 const OrderSalesAdvisor =() => {
     const [productsOrder, setProductsOrder] = useState([]);

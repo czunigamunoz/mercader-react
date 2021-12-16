@@ -3,7 +3,7 @@ import {Modal} from "react-bootstrap";
 import Constants, {icons} from "../../config/constants";
 import axios from "axios";
 import '../../styles/modal.css';
-import sweetAlert from "../../utils/SweetAlert";
+import sweetAlert from "../../utils/sweetAlert";
 
 const OrderCoordinator = () => {
     const [orders, setOrders] = useState([]);

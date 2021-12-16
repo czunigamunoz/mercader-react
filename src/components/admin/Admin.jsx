@@ -1,8 +1,8 @@
-import Sidebar from "../sidebar";
+import Sidebar from "../sidebar/Sidebar";
 import { Route, Routes} from "react-router-dom";
-import DashboardAdmin from "./dashboardAdmin";
-import Users from "./users";
-import Products from "./products";
+import DashboardAdmin from "./DashboardAdmin";
+import Users from "./Users";
+import Products from "./Products";
 
 const Admin = () => {
 

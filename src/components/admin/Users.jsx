@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Constants, {icons} from "../../config/constants";
-import sweetAlert from "../../utils/SweetAlert";
+import sweetAlert from "../../utils/sweetAlert";
 import {Modal} from "react-bootstrap";
 import validations from "../../utils/validations";
 

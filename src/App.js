@@ -1,8 +1,8 @@
-import Login from "./components/login";
+import Login from "./components/login/Login";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Admin from "./components/admin";
-import SalesAdvisor from "./components/sales-advisor";
-import Coordinator from "./components/coordinator";
+import Admin from "./components/admin/Admin";
+import SalesAdvisor from "./components/sales-advisor/SalesAdvisor";
+import Coordinator from "./components/coordinator/Coordinator";
 
 function App() {
   return (

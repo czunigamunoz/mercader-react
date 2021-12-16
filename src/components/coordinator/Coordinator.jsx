@@ -1,7 +1,7 @@
-import Sidebar from "../sidebar";
+import Sidebar from "../sidebar/Sidebar";
 import {Route, Routes} from "react-router-dom";
-import DashboardCoordinator from "./dashboardCoordinator";
-import OrderCoordinator from "./orderCoordinator";
+import DashboardCoordinator from "./DashboardCoordinator";
+import OrderCoordinator from "./OrderCoordinator";
 
 const Coordinator = () => {
     const menuLinks = {

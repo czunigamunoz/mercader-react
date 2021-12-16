@@ -1,9 +1,9 @@
-import Sidebar from "../sidebar";
+import Sidebar from "../sidebar/Sidebar";
 import {Route, Routes} from "react-router-dom";
-import DashboardSalesAdvisor from "./dashboardSalesAdvisor";
-import OrderSalesAdvisor from "./orderSalesAdvisor";
-import OrderByDate from "./orderByDate";
-import OrderByStatus from "./orderByStatus";
+import DashboardSalesAdvisor from "./DashboardSalesAdvisor";
+import OrderSalesAdvisor from "./OrderSalesAdvisor";
+import OrderByDate from "./OrderByDate";
+import OrderByStatus from "./OrderByStatus";
 
 const SalesAdvisor = () => {
 

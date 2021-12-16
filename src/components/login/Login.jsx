@@ -1,8 +1,8 @@
-import './index.css';
+import './login.css';
 import {useState} from "react";
 
 import validations from "../../utils/validations";
-import sweetAlert from "../../utils/SweetAlert";
+import sweetAlert from "../../utils/sweetAlert";
 import axios from "axios";
 import Constants, {icons} from "../../config/constants";
 import { useNavigate } from "react-router-dom";
