@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {icons} from "../../config/constants";
-import {Button} from "react-bootstrap";
 
 const Sidebar = (props) => {
     let navigate = useNavigate();
