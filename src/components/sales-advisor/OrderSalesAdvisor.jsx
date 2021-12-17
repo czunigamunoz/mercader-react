@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Constants, {icons} from "../../config/constants";
 import axios from "axios";
-import {Modal} from "react-bootstrap";
+import {Button, Modal} from "react-bootstrap";
 import sweetAlert from "../../utils/sweetAlert";
 
 const OrderSalesAdvisor =() => {
@@ -94,8 +94,8 @@ const OrderSalesAdvisor =() => {
                 <h1>Order - ASE</h1>
                 <div className="content">
                     <div className="btn__container">
-                        <button type="button" onClick={() => showProducts()}>Add Product</button>
-                        <button type="button" onClick={() => sendOrder()}>Send Order</button>
+                        <Button type="button" onClick={() => showProducts()}>Add Product</Button>
+                        <Button className="btn-danger" type="button" onClick={() => sendOrder()}>Send Order</Button>
                     </div>
                     <div className="table__container">
                         <table className="table">

@@ -264,7 +264,7 @@ main .content button,
     padding: .7rem 1em;
     outline: none;
     border: none;
-    background-color: var(--color-blue-dark) !important;
+    background-color: var(--color-blue-dark);
     border-radius: 0.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;

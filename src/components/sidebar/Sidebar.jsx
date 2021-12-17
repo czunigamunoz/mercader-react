@@ -60,10 +60,10 @@ const Sidebar = (props) => {
                         )
                     })
                 }
-                <Button className="mt-auto p-3 btn--sign-out w-100" onClick={() => signOut()}>
+                <button className="mt-auto p-3 btn--sign-out w-100" onClick={() => signOut()}>
                     {icons.logout}&nbsp;&nbsp;
                     Logout
-                </Button>
+                </button>
             </section>
         </aside>
     )
