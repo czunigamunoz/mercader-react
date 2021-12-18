@@ -7,6 +7,8 @@ const Constants = {
         id: null,
         identification: '',
         name: '',
+        birthtDay: '',
+        monthBirthtDay: '',
         address: '',
         cellPhone: '',
         email: '',

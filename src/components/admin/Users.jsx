@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+
 import Constants, {icons} from "../../config/constants";
 import sweetAlert from "../../utils/sweetAlert";
-import {Modal} from "react-bootstrap";
+import {Modal, Form} from "react-bootstrap";
 import validations from "../../utils/validations";
 
 const Users = () => {
@@ -12,13 +13,21 @@ const Users = () => {
 
     useEffect(() => {
         getUsers();
-    }, []);
+    }, [user]);
 
     const handleInputChange = (e) => {
-        setUser({
-            ...user,
-            [e.currentTarget.id]: e.currentTarget.value
-        });
+        if (e.currentTarget.id === "birthtDay"){
+            setUser({
+                ...user,
+                [e.currentTarget.name]: e.currentTarget.value.split("-")[1],
+                [e.currentTarget.id]: e.currentTarget.value
+            });
+        }else {
+            setUser({
+                ...user,
+                [e.currentTarget.id]: e.currentTarget.value
+            });
+        }
     }
 
     const getUsers = () => {
@@ -76,6 +85,7 @@ const Users = () => {
         }
         const message = !!user.id ? "User updated successfully" : "User created successfully";
         await sweetAlert.successAlert(message);
+        setUser(Constants.default_user);
         setShow(false);
         getUsers();
     }
@@ -91,6 +101,21 @@ const Users = () => {
         await axios.delete(`${Constants.url_user}/${id}`);
         await sweetAlert.successAlert("User eliminated successfully");
         getUsers();
+    }
+
+    const months = {
+        "01": "Enero",
+        "02": "Febrero",
+        "03": "Marzo",
+        "04": "Abril",
+        "05": "Mayo",
+        "06": "Junio",
+        "07": "Julio",
+        "08": "Agosto",
+        "09": "Septiembre",
+        "10": "Octubre",
+        "11": "Noviembre",
+        "12": "Diciembre"
     }
 
     return (
@@ -109,6 +134,7 @@ const Users = () => {
                                 <th className="text-white">Identification</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Birthday</th>
                                 <th>Role</th>
                                 <th>Zone</th>
                                 <th>Edit</th>
@@ -122,6 +148,7 @@ const Users = () => {
                                         <td data-label="Identification">{user.identification}</td>
                                         <td data-label="Name">{user.name}</td>
                                         <td data-label="Email">{user.email}</td>
+                                        <td data-label="Email">{months[user.monthBirthtDay]}{' '}{user.birthtDay.split("-")[2].split("T")[0]}</td>
                                         <td data-label="Type">{user.type}</td>
                                         <td data-label="Zone">{user.zone}</td>
                                         <td data-label="Zone"><span className="warning" onClick={()=>updateUser(user)}>{icons.edit}</span></td>
@@ -178,12 +205,17 @@ const Users = () => {
                             </div>
                             <div className="col-xs-12 col-lg-6">
                                 <label htmlFor="type">Type</label>
-                                <select id="type" value={user.type} onChange={handleInputChange} className="form-control">
+                                <Form.Select id="type" value={user.type} onChange={handleInputChange} className="form-control">
                                     <option value="">Select one option</option>
                                     <option value="ADM">Administrator</option>
                                     <option value="COORD">Coordinator</option>
                                     <option value="ASE">Sales Advisor</option>
-                                </select>
+                                </Form.Select>
+                            </div>
+                            <div className="col-xs-12 col-lg-6">
+                                <label htmlFor="birthtDay">Birthday</label>
+                                <input type="date" className="form-control" id="birthtDay" name="monthBirthtDay"
+                                       onChange={handleInputChange} value={user.birthtDay.split("T")[0]} />
                             </div>
                         </div>
                     </Modal.Body>

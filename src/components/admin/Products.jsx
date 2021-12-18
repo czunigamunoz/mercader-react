@@ -12,7 +12,7 @@ const Products = () => {
 
     useEffect(() => {
         getProducts();
-    }, []);
+    }, [product]);
 
     const handleInputChange = (e) => {
         setProduct({
@@ -67,6 +67,7 @@ const Products = () => {
         }
         const message = !!product.id ? "Product updated successfully" : "Product created successfully";
         await sweetAlert.successAlert(message);
+        setProduct(Constants.default_product);
         setShow(false);
         getProducts();
     }

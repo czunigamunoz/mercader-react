@@ -29,7 +29,6 @@ const OrderSalesAdvisor =() => {
             ...quantities,
             [e.currentTarget.id]: e.currentTarget.value
         });
-        console.log(quantities);
     }
 
     /**
