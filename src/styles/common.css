@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Zen+Antique&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
     --color-primary: #1675f2;
@@ -8,6 +10,8 @@
     --text-dark: #181818;
     --text-gray: #555;
     --color-light: #fffffe;
+
+    --fon-size: clamp(3rem, 4vw, 7rem);
 
     --danger: #f26666;
     --warning: #ffc302;
@@ -74,11 +78,22 @@ p {
 }
 
 .text-blue {
-    color: var(--color-primary);
+    color: var(--color-blue-dark);
 }
 
-.bg-primary {
-    background-color: var(--color-primary);
+.text-1__banner {
+    font-size: var(--fon-size);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.text-2__banner {
+    font-size: var(--fon-size);
+    font-family: 'Architects Daughter', sans-serif;
+}
+
+.bg-blu-dark {
+    background-color: var(--color-blue-dark);
 }
 
 .btn-blue-dark {
