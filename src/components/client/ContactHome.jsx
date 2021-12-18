@@ -5,7 +5,7 @@ const ContactHome = () => {
 
     return (
         <Container className="d-flex flex-column flex-lg-row mt-5 mb-5 rounded-3 bg-secondary bg-opacity-10">
-            <Image className="p-5" src={earphone} alt="audifonos" style={{height: '35rem', width: '35rem'}} fluid/>
+            <Image className="p-5" src={earphone} alt="earphone" style={{height: '35rem', width: '35rem'}} fluid/>
             <Container className="p-5">
                 <h3 className="fs-1">Need any help?</h3>
                 <Form className="mt-4">
