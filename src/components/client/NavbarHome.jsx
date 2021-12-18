@@ -1,7 +1,12 @@
 import {Button, Container, Image, Navbar} from "react-bootstrap";
 import logo from "../../assets/images/logo.webp";
+import { useNavigate } from "react-router-dom";
 
 const NavbarHome = () => {
+    let navigate = useNavigate();
+    const goToSignIn = () => {
+        navigate("/login");
+    }
 
     return (
         <Container>
@@ -17,7 +22,7 @@ const NavbarHome = () => {
                     {/*    </Nav>*/}
                     {/*    */}
                     {/*</Navbar.Collapse>*/}
-                    <Button className="btn-blue-dark">LOGIN</Button>
+                    <Button className="btn-blue-dark" onClick={goToSignIn}>LOGIN</Button>
                     {/*<Navbar.Toggle />*/}
                 </Container>
             </Navbar>
