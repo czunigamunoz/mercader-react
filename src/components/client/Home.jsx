@@ -3,6 +3,7 @@ import NavbarHome from "./NavbarHome";
 import {icons} from "../../config/constants";
 import laptop from "../../assets/images/laptop.webp";
 import ProductsHome from "./ProductsHome";
+import ContactHome from "./ContactHome";
 
 const Home = () => {
 
@@ -20,9 +21,9 @@ const Home = () => {
                     <span className="text-blue text-1__banner">Technology </span>
                     <p className="text-blue text-2__banner">right for you</p>
                 </Stack>
-                <Image src={laptop} alt="laptop" style={{height: '40rem', width: '40rem'}} fluid rounded/>
+                <Image src={laptop} alt="laptop" style={{height: '40rem', width: '40rem'}} fluid/>
             </Container>
-            <Container fluid className="mt-5 p-5 bg-light">
+            <Container fluid className="mt-5 p-5 bg-secondary bg-opacity-10">
                 <Container>
                     <Row className="p-3 text-center">
                         <h2 className="fw-bolder fs-1">Our policies</h2>
@@ -54,6 +55,12 @@ const Home = () => {
                 </Container>
             </Container>
             <ProductsHome/>
+            <ContactHome/>
+            <footer className="bg-danger mt-auto">
+                <Container className="bg-blu-dark">
+                    <p className="text-center text-light">Copyright ©2021 All rights reserved. This page is made by Carlos ZM</p>
+                </Container>
+            </footer>
         </Container>
     )
 }
