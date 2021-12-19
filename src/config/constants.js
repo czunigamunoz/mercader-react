@@ -1,7 +1,7 @@
 const Constants = {
-    url_user: 'http://144.22.236.71:8080/api/user',
-    url_gadget: 'http://144.22.236.71:8080/api/gadget',
-    url_order: 'http://144.22.236.71:8080/api/order',
+    url_user: 'https://api-mercader.herokuapp.com/api/user',
+    url_gadget: 'https://api-mercader.herokuapp.com/api/gadget',
+    url_order: 'https://api-mercader.herokuapp.com/api/order',
     headers: { 'Content-Type': 'application/json' },
     default_user: {
         id: null,
