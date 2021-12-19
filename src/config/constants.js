@@ -1,7 +1,7 @@
 const Constants = {
-    url_user: 'http://localhost:8080/api/user',
-    url_gadget: 'http://localhost:8080/api/gadget',
-    url_order: 'http://localhost:8080/api/order',
+    url_user: 'http://144.22.236.71:8080/api/user',
+    url_gadget: 'http://144.22.236.71:8080/api/gadget',
+    url_order: 'http://144.22.236.71:8080/api/order',
     headers: { 'Content-Type': 'application/json' },
     default_user: {
         id: null,

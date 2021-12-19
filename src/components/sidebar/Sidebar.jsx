@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../../assets/images/logo.webp';
 import {icons} from "../../config/constants";
@@ -6,11 +5,7 @@ import {icons} from "../../config/constants";
 const Sidebar = (props) => {
     let navigate = useNavigate();
     const {menuLinks} = props.menuLinks;
-    const [user, setUser] = useState({});
-
-    useEffect(() => {
-        setUser(JSON.parse(sessionStorage.getItem("user")));
-    }, []);
+    const user = JSON.parse(sessionStorage.getItem("user"));
 
     const signOut = () => {
         sessionStorage.removeItem("user");
