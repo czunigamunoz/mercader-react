@@ -48,19 +48,24 @@ const ProductsHome = () => {
                 </Row>
             </Container>
             <Row xs={1} md={2} lg={3} className="g-4">
-                {products.map((product, idx) => (
+                {Array.from({ length: 6 }).map((_, idx) => (
+                // {products.map((product, idx) => (
                     <Col key={idx}>
                         <Card style={{height: '27rem'}}>
-                            <Card.Img style={{height: '15rem'}} className="p-5" variant="top" src={product.photography}/>
+                            <Card.Img style={{height: '15rem'}} className="p-5" variant="top" src="https://d598hd2wips7r.cloudfront.net/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/3/Y/3Y799LA-1_T1622826153.png"/>
                             <Card.Body>
-                                <Card.Title>{product.name}</Card.Title>
+                                <Card.Title>Portátil Gaming HP 15-ec1037la</Card.Title>
                                 <Card.Text style={{overflowY: 'hidden'}}>
-                                    {product.description}
+                                    Procesador AMD Ryzen™5 4600H
+                                    Memoria	8GB DDR4 - 3200
+                                    Almacenamiento	512GB SSD PCIe
+                                    Tarjeta Gráfica	GeForce GTX 1650Ti 4GB (N18P-G62)
+                                    Sistema Operativo	Windows 10 SLEM
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
                                 <Container className="d-flex justify-content-between align-items-center p-0">
-                                    <span>$ {product.price}</span>
+                                    <span>$ 3.709.300</span>
                                     <Button className="btn-blue-dark">Add to cart</Button>
                                 </Container>
                             </Card.Footer>
